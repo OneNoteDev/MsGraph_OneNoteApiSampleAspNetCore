@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Http;
 
+using Newtonsoft.Json;
+
 using OneNoteApiSample.Auth;
 
 namespace OneNoteApiSample.SampleApis
@@ -26,6 +28,9 @@ namespace OneNoteApiSample.SampleApis
 			string requestDescription = request.ToString();
 
 			string responseBody = await response.Content.ReadAsStringAsync();
+
+			var parsedResponseBody = JsonConvert.DeserializeObject(responseBody);
+			responseBody = JsonConvert.SerializeObject(parsedResponseBody, Formatting.Indented);
 
 			responseDescription += Environment.NewLine + Environment.NewLine + responseBody;
 

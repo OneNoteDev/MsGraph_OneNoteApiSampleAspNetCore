@@ -4,7 +4,7 @@ namespace OneNoteApiSample.SampleApis
 {
 	public static class SampleApiList
 	{
-		private const string OneNoteApiBaseUrl = "https://www.onenote.com/api/beta/me/notes";
+		private const string OneNoteApiBaseUrl = "https://graph.microsoft.com/beta/me/notes";
 
 		public static List<SampleApi> SampleApis => new List<SampleApi>()
 		{
