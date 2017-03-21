@@ -17,7 +17,8 @@ namespace OneNoteApiSample
 		{
 			"https://graph.microsoft.com/Notes.ReadWrite.All",
 			"openid",
-			"offline_access"
+			"offline_access",
+			"profile"
 		};
 
 		// TODO: This sample does not support O365 authentication

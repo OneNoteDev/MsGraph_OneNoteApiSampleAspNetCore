@@ -14,7 +14,7 @@ namespace OneNoteApiSample.Auth
 			Config.MsaRequiredScopes, Config.MsaRedirectUri);
 
 		// Collateral used to refresh access token (only applicable when the app uses the wl.offline_access wl.signin scopes) 
-		private const string MsaTokenRefreshUrl = "https://login.live.com/oauth20_token.srf";
+		private const string MsaTokenRefreshUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
 		private const string TokenRefreshContentType = "application/x-www-form-urlencoded";
 
 		private string _appId;
@@ -42,6 +42,8 @@ namespace OneNoteApiSample.Auth
 						new KeyValuePair<string, string>("redirect_uri", _redirectUrl),
 						new KeyValuePair<string, string>("code", code),
 						new KeyValuePair<string, string>("grant_type", "authorization_code"),
+						new KeyValuePair<string, string>("scope", string.Join(" ", _scopes))
+	
 					};
 
 					if (_appSecret != null)
@@ -72,7 +74,7 @@ namespace OneNoteApiSample.Auth
 				WebUtility.UrlEncode(_redirectUrl);
 
 			string authUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=" + _appId + "&scope=" +
-				string.Join(" ", _scopes) + "&response_type=code&redirect_uri=" + completeRedirectUrl;
+				string.Join(" ", _scopes) + "&response_type=code&redirect_uri=" + completeRedirectUrl + "&response_mode=query";
 
 			return authUrl;
 		}
@@ -103,7 +105,6 @@ namespace OneNoteApiSample.Auth
 						new KeyValuePair<string, string>("refresh_token", refreshToken),
 						new KeyValuePair<string, string>("grant_type", "refresh_token"),
 					};
-
 					if (_appSecret != null)
 					{
 						postFormParameters.Add(new KeyValuePair<string, string>("client_secret", _appSecret));
