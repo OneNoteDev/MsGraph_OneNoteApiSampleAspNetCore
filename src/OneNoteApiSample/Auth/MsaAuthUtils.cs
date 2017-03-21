@@ -71,7 +71,7 @@ namespace OneNoteApiSample.Auth
 			string completeRedirectUrl =
 				WebUtility.UrlEncode(_redirectUrl);
 
-			string authUrl = "https://login.live.com/oauth20_authorize.srf?client_id=" + _appId + "&scope=" +
+			string authUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=" + _appId + "&scope=" +
 				string.Join(" ", _scopes) + "&response_type=code&redirect_uri=" + completeRedirectUrl;
 
 			return authUrl;
