@@ -89,7 +89,7 @@ namespace OneNoteApiSample.Auth
 		{
 			int expiresIn = -1;
 			int.TryParse(msaData.expires_in, out expiresIn);
-			return new AuthTokenProperties(msaData.access_token, expiresIn, msaData.refresh_token, msaData.user_id);
+			return new AuthTokenProperties(msaData.access_token, expiresIn, msaData.refresh_token, msaData.id_token);
 		}
 
 		public async Task<AuthTokenProperties> ExchangeRefreshTokenForAuthInfo(string refreshToken)

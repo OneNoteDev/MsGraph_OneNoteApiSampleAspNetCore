@@ -19,7 +19,7 @@ namespace OneNoteApiSampleUnitTests
 
 			var authUrl = authUtils.BuildUrl();
 
-			authUrl.Should().Be("https://login.live.com/oauth20_authorize.srf?client_id=MyAppId&scope=Scope1 Scope2&response_type=code&redirect_uri=https%3A%2F%2Fwww.microsoft.com");
+			authUrl.Should().Be("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=MyAppId&scope=Scope1 Scope2&response_type=code&redirect_uri=https%3A%2F%2Fwww.microsoft.com&response_mode=query");
 		}
 	}
 }
