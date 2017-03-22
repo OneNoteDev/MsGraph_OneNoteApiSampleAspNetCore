@@ -5,7 +5,7 @@ Created by Microsoft Corporation, 2017. Provided As-is without warranty. Tradema
 DEMO: http://onenoteapisamplenetcore.azurewebsites.net/
 
 ### Intro
-* This is a small sample that shows how to use the OneNote API from an ASP.NET server.
+* This is a small sample that shows how to use access OneNote resources via the Microsoft Graph API from an ASP.NET server.
 * It is configured to work for OneDrive only, but swapping AppIds/Auth urls would make it work with O365
 
 ### Prerequisites
@@ -32,12 +32,12 @@ After you've set up your development tools, and installed the prerequisites list
 You can find additional documentation at the links below.
 
 * Create Pages: 
-    * [POST simple HTML to a new OneNote Quick Notes page](http://msdn.microsoft.com/EN-US/library/office/dn575428.aspx)
+	* [POST simple HTML to a new OneNote Quick Notes page](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/notes_post_pages)
 * Query and Search Pages:
-    *  [GET a paginated list of all pages in OneNote](http://dev.onenote.com/docs#/reference/get-pages)
+	*  [GET a paginated list of all pages in OneNote](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/notes_list_pages)
 * Manage Notebooks and Sections:
-    * [GET a list of all notebooks](http://dev.onenote.com/docs#/reference/get-notebooks)
-    * [GET a list of all sections](http://dev.onenote.com/docs#/reference/get-sections)
+	* [GET a list of all notebooks](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/notes_list_notebooks)
+	* [GET a list of all sections](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/notes_list_sections)
 
 #### Note
 As a sample, and for simplicity, this sample does not follow best practices for an application in Production. If you intent to ship this code, we recommend doing the following:
@@ -47,13 +47,14 @@ As a sample, and for simplicity, this sample does not follow best practices for 
 * Don't store unencrypted refresh tokens in cookies
 
 * **NuGet packages** used in the sample. These are handled using the package manager, as described in the setup instructions. These should update automatically at build time; if not, make sure your NuGet package manager is up-to-date. You can learn more about the packages we used at the links below.
-    * [Newtonsoft Json.NET package](http://newtonsoft.com/) provides Json parsing utilities.
-    * Other Nuget packages from Microsoft, listed in project.json
+	* [Newtonsoft Json.NET package](http://newtonsoft.com/) provides Json parsing utilities.
+	* Other Nuget packages from Microsoft, listed in project.json
 
 ### Version Info
 
 | Date | Change |
 |------|------|
+| March 2017 | Updated to utilize the Microsoft Graph API endpoints. |
 | January 2017 | Initial public release for this code sample. |
   
 ### Learning More
@@ -62,11 +63,10 @@ As a sample, and for simplicity, this sample does not follow best practices for 
 * Contact us on [StackOverflow (tagged OneNote)](http://go.microsoft.com/fwlink/?LinkID=390182)
 * Follow us on [Twitter @onenotedev](http://www.twitter.com/onenotedev)
 * Read our [OneNote Developer blog](http://go.microsoft.com/fwlink/?LinkID=390183)
-* Explore the API using the [apigee.com interactive console](http://go.microsoft.com/fwlink/?LinkID=392871) OR the [apiary.io interactive console](http://dev.onenote.com/docs).
-Also, see the [short overview/tutorial](http://go.microsoft.com/fwlink/?LinkID=390179). 
-* [API Reference](http://msdn.microsoft.com/en-us/library/office/dn575437.aspx) documentation
-* [Debugging / Troubleshooting](http://msdn.microsoft.com/EN-US/library/office/dn575430.aspx)
-* [Getting Started](http://go.microsoft.com/fwlink/?LinkID=331026) with the OneNote service API
+* Explore the API using the [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer).
+* [API Reference](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/notes) documentation
+* [Known Issues](https://developer.microsoft.com/en-us/graph/docs/overview/release_notes)
+* [Getting Started](https://developer.microsoft.com/en-us/graph/docs/get-started/get-started) with the Microsoft Graph API
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 \ No newline at end of file
