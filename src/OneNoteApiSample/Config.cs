@@ -6,9 +6,9 @@ namespace OneNoteApiSample
 	{
 		// TODO: Replace all of these with your own
 		// Note: Redirect URIs should be HTTPS, but it is easier to deploy/play with HTTP
-		public static string MsaRedirectUri => "http://onenoteapisamplenetcore.azurewebsites.net/msaoauthcallback";
-		public static string MsaAppId => "000000004C1BCD88";
-		public static string MsaAppSecret => "rkDgiOLPsDbsVSq3wxearjb";
+		public static string MsaRedirectUri => "http://OneNoteApiSampleGraph.azurewebsites.net/msaoauthcallback";
+		public static string MsaAppId => "d35bde26-f003-4c4c-8bd0-2827a885ae02";
+		public static string MsaAppSecret => "eRdutf8thhPLZEs1h4QjTHq";
 
 		// TODO: Your app might require a different list of scopes.
 		// See https://msdn.microsoft.com/en-us/library/office/dn807159.aspx and https://msdn.microsoft.com/en-us/library/hh243646.aspx#wlbasic
