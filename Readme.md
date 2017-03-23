@@ -6,7 +6,8 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 ### Intro
 * This is a small sample that shows how to use access OneNote resources via the Microsoft Graph API from an ASP.NET server.
-* It is configured to work for OneDrive only, but swapping AppIds/Auth urls would make it work with O365
+* Currently, the Microsoft Graph OneNote endpoints do not support authorized requests via a Microsoft (Live ID) account, so to use this sample, 
+you must be authenticated via an Azure Active Directory (work/school) account.
 
 ### Prerequisites
 
