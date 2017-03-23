@@ -10,13 +10,12 @@ namespace OneNoteApiSample
 		public static string MsaAppSecret => "eRdutf8thhPLZEs1h4QjTHq";
 
 		// TODO: Your app might require a different list of scopes.
-		// See https://msdn.microsoft.com/en-us/library/office/dn807159.aspx and https://msdn.microsoft.com/en-us/library/hh243646.aspx#wlbasic
+		// See https://msdn.microsoft.com/en-us/Library/Azure/Ad/Graph/howto/azure-ad-graph-api-permission-scopes and https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
 		public static List<string> MsaRequiredScopes => new List<string>()
 		{
 			"https://graph.microsoft.com/Notes.ReadWrite.All",
 			"openid",
-			"offline_access",
-			"profile"
+			"offline_access"
 		};
 
 		// TODO: This sample does not support O365 authentication
