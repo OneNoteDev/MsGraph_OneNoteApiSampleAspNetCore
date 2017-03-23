@@ -5,7 +5,6 @@ namespace OneNoteApiSample
 	public static class Config
 	{
 		// TODO: Replace all of these with your own
-		// Note: Redirect URIs should be HTTPS, but it is easier to deploy/play with HTTP
 		public static string MsaRedirectUri => "https://OneNoteApiSampleGraph.azurewebsites.net/msaoauthcallback";
 		public static string MsaAppId => "d35bde26-f003-4c4c-8bd0-2827a885ae02";
 		public static string MsaAppSecret => "eRdutf8thhPLZEs1h4QjTHq";

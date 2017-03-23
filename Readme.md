@@ -2,7 +2,7 @@
 
 Created by Microsoft Corporation, 2017. Provided As-is without warranty. Trademarks mentioned here are the property of their owners.
 
-DEMO: http://OneNoteApiSampleGraph.azurewebsites.net
+DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 ### Intro
 * This is a small sample that shows how to use access OneNote resources via the Microsoft Graph API from an ASP.NET server.
