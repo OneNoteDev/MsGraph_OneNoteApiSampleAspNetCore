@@ -64,7 +64,7 @@ As a sample, and for simplicity, this sample does not follow best practices for 
 * Contact us on [StackOverflow (tagged OneNote)](http://go.microsoft.com/fwlink/?LinkID=390182)
 * Follow us on [Twitter @onenotedev](http://www.twitter.com/onenotedev)
 * Read our [OneNote Developer blog](http://go.microsoft.com/fwlink/?LinkID=390183)
-* Explore the API using the [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer).
+* Explore the API using the [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
 * [API Reference](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/notes) documentation
 * [Known Issues](https://developer.microsoft.com/en-us/graph/docs/overview/release_notes)
 * [Getting Started](https://developer.microsoft.com/en-us/graph/docs/get-started/get-started) with the Microsoft Graph API
