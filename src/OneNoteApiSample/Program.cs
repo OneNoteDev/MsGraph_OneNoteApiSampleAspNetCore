@@ -20,8 +20,10 @@ namespace OneNoteApiSample
 				.UseContentRoot(Directory.GetCurrentDirectory())
 #if DEBUG
 				// NOTE: This is only for development/testing purposes
-				.UseUrls("http://localhost:80")
-				.UseUrls(redirectUri.Scheme + "://" + redirectUri.Host)
+				// .UseUrls("http://testuri:80")
+				.UseKestrel(cfg => cfg.UseHttps(cert))
+				.UseUrls("https://localhost:5001")
+
 #endif
 				.UseIISIntegration()
 				.UseStartup<Startup>()
