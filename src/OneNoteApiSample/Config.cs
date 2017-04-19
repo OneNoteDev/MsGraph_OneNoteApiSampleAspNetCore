@@ -5,7 +5,7 @@ namespace OneNoteApiSample
 	public static class Config
 	{
 		// TODO: Replace all of these with your own
-		public static string MsaRedirectUri => "https://localhost/msaoauthcallback";
+		public static string MsaRedirectUri => "https://localhost:5001/msaoauthcallback";
 		public static string MsaAppId => "8414ccf0-5668-40c2-8fb4-2d70c3b3b0d6";
 		public static string MsaAppSecret => "orD4m05tYxooWHt5BZ460za";
 
@@ -17,7 +17,5 @@ namespace OneNoteApiSample
 			"openid",
 			"offline_access"
 		};
-
-		// TODO: This sample does not support O365 authentication
 	}
 }
