@@ -1,28 +1,27 @@
 {
   "iisSettings": {
     "windowsAuthentication": false,
-    "anonymousAuthentication": false,
-			"iisExpress": {
-				"applicationUrl": "http://OneNoteApiSampleGraph.azurewebsites.net:80/",
-				"sslPort": 0
-			}
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://localhost:5001",
+      "sslPort": 0
+    }
   },
   "profiles": {
-			"IIS Express": {
-				"commandName": "IISExpress",
-				"launchBrowser": true,
-				"launchUrl": "http://OneNoteApiSampleGraph.azurewebsites.net:80/",
-				"environmentVariables": {
-					"ASPNETCORE_ENVIRONMENT": "Development"
-				}
-			},
-			"OneNoteApiSample": {
-				"commandName": "Project",
-				"launchBrowser": true,
-				"launchUrl": "http://OneNoteApiSampleGraph.azurewebsites.net",
-				"environmentVariables": {
-					"ASPNETCORE_ENVIRONMENT": "Development"
-				}
-			}
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchUrl": "https://localhost:5001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "OneNoteApiSample": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:5001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
   }
 }

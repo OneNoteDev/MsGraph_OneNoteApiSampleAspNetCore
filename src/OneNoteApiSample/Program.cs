@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Hosting;
 
 namespace OneNoteApiSample
@@ -14,14 +14,17 @@ namespace OneNoteApiSample
 #if DEBUG
 			var redirectUri = new Uri(Config.MsaRedirectUri);
 #endif
+			var pfxFile = Path.Combine(Directory.GetCurrentDirectory(), "server.pfx");
 
 			var host = new WebHostBuilder()
-				.UseKestrel()
 				.UseContentRoot(Directory.GetCurrentDirectory())
+				.UseKestrel(options =>
+				{
+					options.UseHttps(new X509Certificate2(pfxFile, "password"));
+				})
 #if DEBUG
 				// NOTE: This is only for development/testing purposes
-				.UseUrls("http://localhost:80")
-				.UseUrls(redirectUri.Scheme + "://" + redirectUri.Host)
+				.UseUrls("https://localhost:5001")
 #endif
 				.UseIISIntegration()
 				.UseStartup<Startup>()
