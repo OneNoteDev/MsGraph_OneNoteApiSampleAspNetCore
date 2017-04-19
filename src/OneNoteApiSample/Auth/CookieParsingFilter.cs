@@ -9,6 +9,7 @@ namespace OneNoteApiSample.Auth
 	{
 		public override async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
 		{
+
 			AuthTokenProperties tokenProperties = CookieUtils.GetCookieFromRequest(context.HttpContext.Request);
 
 			if (tokenProperties != null)
