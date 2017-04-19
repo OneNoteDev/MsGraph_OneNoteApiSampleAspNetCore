@@ -14,6 +14,7 @@ namespace OneNoteApiSample
 		public static List<string> MsaRequiredScopes => new List<string>()
 		{
 			"https://graph.microsoft.com/Notes.ReadWrite.All",
+			"https://graph.microsoft.com/User.Read",
 			"openid",
 			"offline_access"
 		};
