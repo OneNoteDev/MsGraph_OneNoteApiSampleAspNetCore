@@ -12,7 +12,10 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 ### Prerequisites
 
-**Tools and Libraries** you will need to download, install, and configure for your development environment* [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads).* [ASP.NET Core](https://www.asp.net/core)* [.NET Core 1.0.1 SDK Preview 2 build 3133](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.1-preview2-download.md).
+**Tools and Libraries** you will need to download, install, and configure for your development environment
+* [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads)
+* [ASP.NET Core](https://www.asp.net/core)
+* [.NET Core 1.0.1 SDK Preview 2 build 3133](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.1-preview2-download.md)
 
 ### Using the sample
 
