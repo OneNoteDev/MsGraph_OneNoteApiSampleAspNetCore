@@ -19,7 +19,8 @@ namespace OneNoteApiSample.Auth
 			{
 				HttpOnly = true,
 				Secure = false, // In production, this should be set to true!
-				Expires = DateTime.UtcNow.AddDays(90) // Feel free to tweak expiry
+				//  Set expiry for production. Removed for local development with Chrome. Chrome only allows session cookies to be stored for localhost.
+				// Expires = DateTime.UtcNow.AddDays(90)
 			});
 		}
 
