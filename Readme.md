@@ -12,10 +12,7 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 ### Prerequisites
 
-**Tools and Libraries** you will need to download, install, and configure for your development environment
-* [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads).
-* [ASP.NET Core](https://www.asp.net/core)
-* [.NET Core 1.0.1 SDK Preview 2 build 3133](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.1-preview2-download.md).
+**Tools and Libraries** you will need to download, install, and configure for your development environment* [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads).* [ASP.NET Core](https://www.asp.net/core)* [.NET Core 1.0.1 SDK Preview 2 build 3133](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.1-preview2-download.md).
 
 ### Using the sample
 
@@ -23,8 +20,9 @@ After you've set up your development tools, and installed the prerequisites list
 
 1.	Download the repository as a ZIP file to your local computer, and extract the files. Or, clone the repository into a local copy of Git.
 2.	Open the project (.sln file) in Visual Studio.
-3.	It is highly recommended that you get your own client ID, secret and redirect uri and copy it into[Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9) You can get your own appid, app secret and redirect uri [here](http://msdn.microsoft.com/EN-US/library/office/dn575426.aspx)
-4.	Make a change to your machine (In windows, this is hosts file change) so the domain "https://onenoteapisamplegraph.azurewebsites.net" (or the domain for the redirect URI you've chosen for your app) resolves to localhost or "127.0.0.1". Otherwise, authentication won't work.
+3.	It is highly recommended that you get your own client ID, secret and redirect uri and copy it into[Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9) You can get your own appid, app secret and redirect uri [here](http://developer.microsoft.com/en-us/graph/docs/authorization/auth_register_app_v2)
+4.	Your redirect URI will need to use HTTPS. For local development, the sample uses https://localhost:5001. You will need to change this to point to your app's domain in production.
+	-	You will need to [generate a temporary X509Certificate](https://msdn.microsoft.com/en-us/library/ms733813(v=vs.110).aspx) to use during development. Add the \*.pfx file to the project root and alter the Program.cs file to reflect the certificate filename and password.
 5.	Make sure you have selected the "OneNoteApiSample" configuration when launching the app locally. See [screenshot](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/images/OneNoteApiSampleConfiguration.PNG).
 6.	Build and run the application (F5)
 
