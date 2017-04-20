@@ -13,9 +13,7 @@ namespace OneNoteApiSample
 		// See https://msdn.microsoft.com/en-us/Library/Azure/Ad/Graph/howto/azure-ad-graph-api-permission-scopes and https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes
 		public static List<string> MsaRequiredScopes => new List<string>()
 		{
-			"https://graph.microsoft.com/Notes.ReadWrite.All",
-			"https://graph.microsoft.com/User.Read",
-			"openid",
+			"Notes.ReadWrite.All",
 			"offline_access"
 		};
 	}

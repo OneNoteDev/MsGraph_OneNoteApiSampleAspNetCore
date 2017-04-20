@@ -14,8 +14,6 @@ namespace OneNoteApiSample
 #if DEBUG
 			var redirectUri = new Uri(Config.MsaRedirectUri);
 #endif
-			// Used to generate the certificate for local development. Replace "server.fpx" with the filename of your cert.
-			// See https://msdn.microsoft.com/en-us/library/ms733813(v=vs.110).aspx for more information.
 
 			var host = new WebHostBuilder()
 				.UseContentRoot(Directory.GetCurrentDirectory())

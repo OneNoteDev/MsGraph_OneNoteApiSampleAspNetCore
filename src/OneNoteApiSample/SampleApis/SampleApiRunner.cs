@@ -22,7 +22,7 @@ namespace OneNoteApiSample.SampleApis
 			{
 				request.Content = new StringContent(sampleApi.HttpBody);
 				request.Content.Headers.ContentType = new MediaTypeHeaderValue(sampleApi.HttpContentHeader);
-			}
+			} 
 			var response = await client.SendAsync(request);
 			string responseDescription = response.ToString();
 			string requestDescription = request.ToString();
