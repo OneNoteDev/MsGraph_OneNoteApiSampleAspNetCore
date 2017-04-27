@@ -27,9 +27,9 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
   
   ![Installing Earlier Releases](./images/VisualStudioEnterpriseSearch.png)
 
-* [ASP.NET Core](https://www.asp.net/core)
+* [ASP.NET Core SDK (For .NET Core 1.0)](https://www.microsoft.com/net/download/core)
 
-* [.NET Core 1.0.1 SDK (Preview 2)](https://www.microsoft.com/net/download/core)
+* [Visual Studio 2015 Tools](https://www.microsoft.com/net/download/core)
   1. Install Visual Studio 2015 tools. 
   
   ![Visual Studio Tools Install](./images/VisualStudioToolsInstall.png)
