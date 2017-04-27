@@ -16,18 +16,22 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 * [Visual Studio 2015 Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs) 
   1. Click on “How to Install a Specific Release of Visual Studio”: 
+  
   ![Download earlier release of Visual Studio](./images/HowToInstall.png)
 
   2. Click on “My.VisualStudio.com”: 
+  
   ![Click on "My.VisualStudio.com"](./images/InstallingEarlierReleases.png)
 
   3. [Download Visual Studio Enterprise 2015 with Update 3](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) (logged in with a MSFT account) 
+  
   ![Installing Earlier Releases](./images/VisualStudioEnterpriseSearch.png)
 
 * [ASP.NET Core](https://www.asp.net/core)
 
 * [.NET Core 1.0.1 SDK (Preview 2)](https://www.microsoft.com/net/download/core)
   1. Install Visual Studio 2015 tools. 
+  
   ![Visual Studio Tools Install](./images/VisualStudioToolsInstall.png)
 
 ### Using the sample
