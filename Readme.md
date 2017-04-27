@@ -12,10 +12,17 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 
 ### Prerequisites
 
-**Tools and Libraries** you will need to download, install, and configure for your development environment
-* [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads)
-* [ASP.NET Core](https://www.asp.net/core)
-* [.NET Core 1.0.1 SDK Preview 2 build 3133](https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.0.1-preview2-download.md)
+**Tools and Libraries** you will need to download, install, and configure for your development environment* [Visual Studio 2015 Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs) 1. Click on “How to Install a Specific Release of Visual Studio”: ![Download earlier release of Visual Studio](./images/HowToInstall.png)
+
+1.	Click on “My.VisualStudio.com”: ![Click on "My.VisualStudio.com"](./images/InstallingEarlierReleases.png)
+
+2.	[Download Visual Studio Enterprise 2015 with Update 3](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015) (logged in with a MSFT account) ![Installing Earlier Releases](./images/VisualStudioEnterpriseSearch.png)
+
+3.	[ASP.NET Core](https://www.asp.net/core)
+
+4.	[.NET Core 1.0.1 SDK (Preview 2)](https://www.microsoft.com/net/download/core)
+
+	1.	Install Visual Studio 2015 tools. ![Visual Studio Tools Install](./images/VisualStudioToolsInstall.png)
 
 ### Using the sample
 
@@ -24,8 +31,7 @@ After you've set up your development tools, and installed the prerequisites list
 1.	Download the repository as a ZIP file to your local computer, and extract the files. Or, clone the repository into a local copy of Git.
 2.	Open the project (.sln file) in Visual Studio.
 3.	It is highly recommended that you get your own client ID, secret and redirect uri and copy it into [Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9). You can get your own appid, app secret and redirect uri [here](http://developer.microsoft.com/en-us/graph/docs/authorization/auth_register_app_v2)
-4.	For local development, the sample uses https://localhost:5001/msaoauthcallback as a redirect URI. For production, you should change this to point to your application's domain.
- >Note: Chrome and Firefox do not allow cookies to be set on localhost, and thus authentication will not work on these browsers during development if you choose to redirect to localhost.
+4.	For local development, the sample uses https://localhost:5001/msaoauthcallback as a redirect URI. For production, you should change this to point to your application's domain. >Note: Chrome and Firefox do not allow cookies to be set on localhost, and thus authentication will not work on these browsers during development if you choose to redirect to localhost.
 5.	Make sure you have selected the "OneNoteApiSample" configuration when launching the app locally. See [screenshot](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/images/OneNoteApiSampleConfiguration.PNG).
 6.	Build and run the application (F5)
 
