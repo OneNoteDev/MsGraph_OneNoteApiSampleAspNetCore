@@ -30,7 +30,6 @@ DEMO: https://onenoteapisamplegraph.azurewebsites.net
 * [ASP.NET Core SDK (For .NET Core 1.0)](https://www.microsoft.com/net/download/core)
 
 * [Visual Studio 2015 Tools](https://www.microsoft.com/net/download/core)
-  1. Install Visual Studio 2015 tools. 
   
   ![Visual Studio Tools Install](./images/VisualStudioToolsInstall.png)
 
