@@ -5,6 +5,7 @@ namespace OneNoteApiSample
 	public static class Config
 	{
 		// TODO: Replace all of these with your own
+
 		public static string MsaRedirectUri => "http://localhost:5001/msaoauthcallback";
 		public static string MsaAppId => "YOUR APP ID HERE";
 		public static string MsaAppSecret => "YOUR APP SECRET HERE";
@@ -14,6 +15,7 @@ namespace OneNoteApiSample
 		public static List<string> MsaRequiredScopes => new List<string>()
 		{
 			"Notes.ReadWrite.All",
+			"Notes.ReadWrite",
 			"offline_access"
 		};
 	}
