@@ -12,7 +12,7 @@ namespace OneNoteApiSample
 
 			// NOTE: This is only for development/testing purposes
 #if DEBUG
-			var redirectUri = new Uri(Config.MsaRedirectUri);
+			var redirectUri = new Uri(Config.MsGraphRedirectUri);
 #endif
 
 			var host = new WebHostBuilder()

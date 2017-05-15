@@ -1,6 +1,6 @@
 ﻿namespace OneNoteApiSample.Auth
 {
-	public class MsaGetTokenResponse
+	public class MsGraphGetTokenResponse
 	{
 		public string token_type;
 		public string expires_in;

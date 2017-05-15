@@ -9,13 +9,13 @@ using Newtonsoft.Json;
 
 namespace OneNoteApiSample.Auth
 {
-	public class MsaAuthUtils
+	public class MsGraphAuthUtils
 	{
-		public static readonly MsaAuthUtils Instance = new MsaAuthUtils(Config.MsaAppId, Config.MsaAppSecret,
-			Config.MsaRequiredScopes, Config.MsaRedirectUri);
+		public static readonly MsGraphAuthUtils Instance = new MsGraphAuthUtils(Config.MsGraphAppId, Config.MsGraphAppSecret,
+			Config.MsGraphRequiredScopes, Config.MsGraphRedirectUri);
 
 		// Collateral used to refresh access token (only applicable when the app uses the wl.offline_access wl.signin scopes) 
-		private const string MsaTokenRefreshUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+		private const string MsGraphTokenRefreshUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
 		private const string TokenRefreshContentType = "application/x-www-form-urlencoded";
 
 		private string _appId;
@@ -23,7 +23,7 @@ namespace OneNoteApiSample.Auth
 		private string _redirectUrl;
 		private IEnumerable<string> _scopes;
 
-		public MsaAuthUtils(string appId, string appSecret, IEnumerable<string> scopes, string redirectUrl)
+		public MsGraphAuthUtils(string appId, string appSecret, IEnumerable<string> scopes, string redirectUrl)
 		{
 			_appId = appId;
 			_appSecret = appSecret;
@@ -31,7 +31,7 @@ namespace OneNoteApiSample.Auth
 			_redirectUrl = redirectUrl;
 		}
 
-		private async Task<MsaGetTokenResponse> ExchangeCodeForAccessTokenPrivate(string code)
+		private async Task<MsGraphGetTokenResponse> ExchangeCodeForAccessTokenPrivate(string code)
 		{
 			try
 			{
@@ -56,10 +56,10 @@ namespace OneNoteApiSample.Auth
 					var formContent = new FormUrlEncodedContent(postFormParameters);
 					client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", TokenRefreshContentType);
 
-					HttpResponseMessage response = await client.PostAsync(MsaTokenRefreshUrl, formContent);
+					HttpResponseMessage response = await client.PostAsync(MsGraphTokenRefreshUrl, formContent);
 					string responseString = await response.Content.ReadAsStringAsync();
-					MsaGetTokenResponse msa = JsonConvert.DeserializeObject<MsaGetTokenResponse>(responseString);
-					return msa;
+					MsGraphGetTokenResponse tokenResponse = JsonConvert.DeserializeObject<MsGraphGetTokenResponse>(responseString);
+					return tokenResponse;
 				}
 			}
 			catch (Exception ex)
@@ -82,15 +82,15 @@ namespace OneNoteApiSample.Auth
 
 		public async Task<AuthTokenProperties> ExchangeCodeForAccessToken(string code)
 		{
-			MsaGetTokenResponse msaData = await ExchangeCodeForAccessTokenPrivate(code);
-			return TransformMsaTokenResponseIntoAuthProperties(msaData);
+			MsGraphGetTokenResponse msGraphData = await ExchangeCodeForAccessTokenPrivate(code);
+			return TransformMSGraphTokenResponseIntoAuthProperties(msGraphData);
 		}
 
-		private AuthTokenProperties TransformMsaTokenResponseIntoAuthProperties(MsaGetTokenResponse msaData)
+		private AuthTokenProperties TransformMSGraphTokenResponseIntoAuthProperties(MsGraphGetTokenResponse MSGraphData)
 		{
 			int expiresIn = -1;
-			int.TryParse(msaData.expires_in, out expiresIn);
-			return new AuthTokenProperties(msaData.access_token, expiresIn, msaData.refresh_token, msaData.id_token);
+			int.TryParse(MSGraphData.expires_in, out expiresIn);
+			return new AuthTokenProperties(MSGraphData.access_token, expiresIn, MSGraphData.refresh_token, MSGraphData.id_token);
 		}
 
 		public async Task<AuthTokenProperties> ExchangeRefreshTokenForAuthInfo(string refreshToken)
@@ -115,10 +115,10 @@ namespace OneNoteApiSample.Auth
 
 					client.DefaultRequestHeaders.TryAddWithoutValidation("Content-Type", TokenRefreshContentType);
 
-					var response = await client.PostAsync(MsaTokenRefreshUrl, formContent);
+					var response = await client.PostAsync(MsGraphTokenRefreshUrl, formContent);
 					string responseString = await response.Content.ReadAsStringAsync();
-					MsaGetTokenResponse msa = JsonConvert.DeserializeObject<MsaGetTokenResponse>(responseString);
-					return TransformMsaTokenResponseIntoAuthProperties(msa);
+					MsGraphGetTokenResponse tokenResponse = JsonConvert.DeserializeObject<MsGraphGetTokenResponse>(responseString);
+					return TransformMSGraphTokenResponseIntoAuthProperties(tokenResponse);
 				}
 			}
 			catch (Exception ex)

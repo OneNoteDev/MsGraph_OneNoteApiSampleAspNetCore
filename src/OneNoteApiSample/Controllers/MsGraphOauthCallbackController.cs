@@ -7,7 +7,7 @@ using OneNoteApiSample.Auth;
 
 namespace OneNoteApiSample.Controllers
 {
-	public class MsaOauthCallbackController : Controller
+	public class MsGraphOauthCallbackController : Controller
 	{
 		// Initial HomePage
 		public async Task<IActionResult> Index(string code)
@@ -17,7 +17,7 @@ namespace OneNoteApiSample.Controllers
 				throw new ArgumentException("code must be present!");
 			}
 
-			AuthTokenProperties tokenInformation = await MsaAuthUtils.Instance.ExchangeCodeForAccessToken(code);
+			AuthTokenProperties tokenInformation = await MsGraphAuthUtils.Instance.ExchangeCodeForAccessToken(code);
 
 			CookieUtils.StoreInCookie(tokenInformation, Response);
 

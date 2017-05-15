@@ -9,12 +9,12 @@ using OneNoteApiSample.Auth;
 namespace OneNoteApiSampleUnitTests
 {
 	[TestClass]
-	public class MsaAuthUtilsUnitTests
+	public class MsGraphAuthUtilsUnitTests
 	{
 		[TestMethod]
 		public void AuthUrlGeneration_GeneratedCorrectly()
 		{
-			var authUtils = new MsaAuthUtils("MyAppId", "MyAppSecret", new List<string>() {"Scope1", "Scope2"},
+			var authUtils = new MsGraphAuthUtils("MyAppId", "MyAppSecret", new List<string>() {"Scope1", "Scope2"},
 				"https://www.microsoft.com");
 
 			var authUrl = authUtils.BuildUrl();

@@ -18,7 +18,7 @@ namespace OneNoteApiSample.Auth
 				if (DateTime.UtcNow > tokenProperties.Expiry)
 				{
 					// Renew them
-					tokenProperties = await MsaAuthUtils.Instance.ExchangeRefreshTokenForAuthInfo(tokenProperties.RefreshToken);
+					tokenProperties = await MsGraphAuthUtils.Instance.ExchangeRefreshTokenForAuthInfo(tokenProperties.RefreshToken);
 				}
 
 				AuthContext.SetContext(context.HttpContext, tokenProperties);
