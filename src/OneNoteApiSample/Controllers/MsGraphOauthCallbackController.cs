@@ -7,7 +7,7 @@ using OneNoteApiSample.Auth;
 
 namespace OneNoteApiSample.Controllers
 {
-	public class MsGraphOauthCallbackController : Controller
+	public class MsGraphOAuthCallbackController : Controller
 	{
 		// Initial HomePage
 		public async Task<IActionResult> Index(string code)

@@ -40,7 +40,7 @@ After you've set up your development tools, and installed the prerequisites list
 1.	Download the repository as a ZIP file to your local computer, and extract the files. Or, clone the repository into a local copy of Git.
 2.	Open the project (.sln file) in Visual Studio.
 3.	It is highly recommended that you get your own client ID, secret and redirect uri and copy it into [Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9). You can get your own appid, app secret and redirect uri [here](http://developer.microsoft.com/en-us/graph/docs/authorization/auth_register_app_v2)
-4.	For local development, the sample uses http://localhost:5001/oauthcallback as a redirect URI. For production, you should change this to point to your application's domain. >Note: Chrome and Firefox do not allow cookies to be set on localhost, and thus authentication will not work on these browsers during development if you choose to redirect to localhost.
+4.	For local development, the sample uses http://localhost:5001/msgraphoauthcallback as a redirect URI. For production, you should change this to point to your application's domain. >Note: Chrome and Firefox do not allow cookies to be set on localhost, and thus authentication will not work on these browsers during development if you choose to redirect to localhost.
 5.	Make sure you have selected the "OneNoteApiSample" configuration when launching the app locally. See [screenshot](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/images/OneNoteApiSampleConfiguration.PNG).
 6.	Build and run the application (F5)
 
